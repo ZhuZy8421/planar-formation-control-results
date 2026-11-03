@@ -55,6 +55,8 @@ A five-agent comparison evaluates the full controller and the controller with th
 
 The flight platform uses PX4-based quadrotors and NOKOV motion-capture position feedback. The demonstrations show formation maintenance during translation and formation-plane reorientation.
 
+**Experimental videos:** [Three-UAV formation (46.1 s)](assets/experiments/three_uav_formation.mp4) · [Four-UAV formation (61.1 s)](assets/experiments/four_uav_formation.mp4)
+
 ### Flight Demonstrations
 
 Click a preview to open or download the video. Both videos retain the physical footage, the corresponding RViz visualization, and the original selected audio. RViz displays the complete trajectory history and ground-to-agent height lines.
