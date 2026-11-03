@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Simulation animations and UAV flight experiments for planar formation control in 3D.">
+  <title>Planar Formation Control in 3D — Results</title>
+  <style>
+    :root { color-scheme: light; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #20252b; background: #fff; }
+    * { box-sizing: border-box; }
+    body { max-width: 1080px; margin: 0 auto; padding: 38px 24px 56px; line-height: 1.6; }
+    a { color: #175da7; text-underline-offset: 3px; }
+    h1 { font-size: clamp(1.8rem, 4vw, 2.4rem); line-height: 1.2; margin: 0 0 12px; }
+    h2 { font-size: 1.7rem; border-bottom: 1px solid #dedfe1; padding-bottom: 10px; margin: 48px 0 24px; }
+    h3 { font-size: 1.15rem; margin: 28px 0 12px; }
+    p { margin: 12px 0 18px; }
+    nav { display: flex; flex-wrap: wrap; gap: 10px 24px; margin: 24px 0; }
+    img, video { display: block; max-width: 100%; height: auto; }
+    .animation { width: 960px; margin: 12px auto; }
+    video { width: 100%; background: #171e2a; border: 1px solid #dfe2e5; }
+    .meta { color: #59626d; font-size: .94rem; }
+    .pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin: 20px 0; }
+    .pair img { width: 100%; }
+    .centered { margin: 20px auto; }
+    summary { cursor: pointer; color: #175da7; padding: 12px 0; }
+    section, article { scroll-margin-top: 20px; }
+    footer { border-top: 1px solid #dedfe1; margin-top: 44px; padding-top: 18px; }
+    @media (max-width: 640px) { body { padding: 26px 16px 40px; } .pair { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Planar Formation Control in 3D</h1>
+    <p>Visual results for distributed formation control with shape, scale, coplanarity, and formation-plane orientation regulation.</p>
+    <nav aria-label="Results navigation">
+      <a href="#simulation-results">Simulation Results</a>
+      <a href="#experimental-results">Experimental Results</a>
+      <a href="https://github.com/coder-s1ngle/planar-formation-control-results">GitHub repository</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="simulation-results">
+      <h2>Simulation Results</h2>
+      <p>Four-agent and five-agent formations perform translation, scaling, and plane reorientation under double-integrator dynamics. Each animation covers the complete 90-s simulation at <strong>5× speed</strong>, with a reference switch at 60 s.</p>
+      <h3>Four-Agent Square</h3>
+      <img class="animation" src="assets/simulation/4agent_maneuver.gif" alt="Animated four-agent trajectory evolution" width="960" height="540">
+      <h3>Five-Agent Pentagon</h3>
+      <img class="animation" src="assets/simulation/5agent_maneuver.gif" alt="Animated five-agent trajectory evolution" width="960" height="540" loading="lazy">
+      <details>
+        <summary>Formation error curves</summary>
+        <div class="pair">
+          <img src="assets/simulation/4agent_errors.png" alt="Four-agent geometric errors" loading="lazy">
+          <img src="assets/simulation/5agent_errors.png" alt="Five-agent geometric errors" loading="lazy">
+        </div>
+      </details>
+      <h3>Coplanarity Constraint Necessity</h3>
+      <p>The full controller corrects out-of-plane deviations. Residual deviations remain when the coplanarity term is disabled.</p>
+      <div class="pair">
+        <img src="assets/simulation/coplanarity_height_ablation.png" alt="Out-of-plane displacement comparison" loading="lazy">
+        <img src="assets/simulation/coplanarity_error_ablation.png" alt="Coplanarity error comparison" loading="lazy">
+      </div>
+    </section>
+
+    <section id="experimental-results">
+      <h2>Experimental Results</h2>
+      <p>The platform uses PX4-based quadrotors and NOKOV position feedback. Press the play button below to watch each flight in your browser.</p>
+      <article id="three-uav">
+        <h3>Three-UAV Formation</h3>
+        <p class="meta">46.1 s · Original playback speed · Physical experiment and RViz visualization</p>
+        <video controls playsinline preload="metadata" poster="assets/experiments/three_uav_preview.jpg" width="1920" height="594" aria-label="Three-UAV formation flight">
+          <source src="assets/experiments/three_uav_formation.mp4" type="video/mp4">
+          <p>Your browser does not support this video. <a href="assets/experiments/three_uav_formation.mp4">Open the MP4</a>.</p>
+        </video>
+      </article>
+      <article id="four-uav">
+        <h3>Four-UAV Formation</h3>
+        <p class="meta">61.1 s · Original playback speed · Physical experiment and RViz visualization</p>
+        <video controls playsinline preload="metadata" poster="assets/experiments/four_uav_preview.jpg" width="1920" height="594" aria-label="Four-UAV formation flight">
+          <source src="assets/experiments/four_uav_formation.mp4" type="video/mp4">
+          <p>Your browser does not support this video. <a href="assets/experiments/four_uav_formation.mp4">Open the MP4</a>.</p>
+        </video>
+      </article>
+      <p class="meta">Both videos retain full trajectory histories and ground-to-agent height lines. Physical footage and visualization use the original approximate action alignment.</p>
+      <h3>Four-UAV Tracking Results</h3>
+      <p>These curves are from a separate flight with a 1-m square formation, translation, a 45° plane tilt, and a return to a horizontal formation.</p>
+      <img src="assets/experiments/four_uav_errors.png" alt="Four-UAV experimental geometric errors" loading="lazy">
+      <img class="centered" src="assets/experiments/four_uav_plane_tilt.png" alt="Actual and desired formation-plane tilt" width="580" loading="lazy">
+    </section>
+  </main>
+  <footer class="meta">Supplementary simulation and experimental results.</footer>
+</body>
+</html>

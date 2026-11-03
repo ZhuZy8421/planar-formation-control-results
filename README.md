@@ -4,11 +4,13 @@ Visual results for distributed planar formation control with shape, scale, copla
 
 **[Simulation Results](#simulation-results)** · **[Experimental Results](#experimental-results)**
 
+**[Online results and video players](https://coder-s1ngle.github.io/planar-formation-control-results/)**
+
 ## Simulation Results
 
 ### Formation Maneuvering
 
-Four-agent and five-agent formations perform simultaneous translation, scaling, and plane reorientation under double-integrator dynamics. The scale and normal references change directly at 60 s. The animations show the evolution of the trajectories together with a close view of the formation geometry.
+Four-agent and five-agent formations perform simultaneous translation, scaling, and plane reorientation under double-integrator dynamics. The scale and normal references change directly at 60 s. The animations show the trajectory evolution in a single view.
 
 The GIFs cover the complete 90-s simulation at **5× playback speed**.
 
@@ -55,23 +57,23 @@ A five-agent comparison evaluates the full controller and the controller with th
 
 The flight platform uses PX4-based quadrotors and NOKOV motion-capture position feedback. The demonstrations show formation maintenance during translation and formation-plane reorientation.
 
-**Experimental videos:** [Three-UAV formation (46.1 s)](assets/experiments/three_uav_formation.mp4) · [Four-UAV formation (61.1 s)](assets/experiments/four_uav_formation.mp4)
+**Play online:** [Three-UAV formation (46.1 s)](https://coder-s1ngle.github.io/planar-formation-control-results/#three-uav) · [Four-UAV formation (61.1 s)](https://coder-s1ngle.github.io/planar-formation-control-results/#four-uav)
 
 ### Flight Demonstrations
 
-Click a preview to open or download the video. Both videos retain the physical footage, the corresponding RViz visualization, and the original selected audio. RViz displays the complete trajectory history and ground-to-agent height lines.
+Click a preview to open the online video player; no manual download is required. Both videos retain the physical footage, the corresponding RViz visualization, and the original selected audio. RViz displays the complete trajectory history and ground-to-agent height lines.
 
 #### Three-UAV Formation
 
-[![Three-UAV flight demonstration](assets/experiments/three_uav_preview.jpg)](assets/experiments/three_uav_formation.mp4)
+[![Three-UAV flight demonstration](assets/experiments/three_uav_preview.jpg)](https://coder-s1ngle.github.io/planar-formation-control-results/#three-uav)
 
-[Watch / download video](assets/experiments/three_uav_formation.mp4) · 46.1 s · Original playback speed
+[Play online](https://coder-s1ngle.github.io/planar-formation-control-results/#three-uav) · [MP4 file](assets/experiments/three_uav_formation.mp4) · 46.1 s · Original playback speed
 
 #### Four-UAV Formation
 
-[![Four-UAV flight demonstration](assets/experiments/four_uav_preview.jpg)](assets/experiments/four_uav_formation.mp4)
+[![Four-UAV flight demonstration](assets/experiments/four_uav_preview.jpg)](https://coder-s1ngle.github.io/planar-formation-control-results/#four-uav)
 
-[Watch / download video](assets/experiments/four_uav_formation.mp4) · 61.1 s · Original playback speed
+[Play online](https://coder-s1ngle.github.io/planar-formation-control-results/#four-uav) · [MP4 file](assets/experiments/four_uav_formation.mp4) · 61.1 s · Original playback speed
 
 ### Four-UAV Tracking Results
 
