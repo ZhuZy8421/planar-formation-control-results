@@ -4,6 +4,8 @@ Visual results for distributed planar formation control with shape, scale, copla
 
 **[Simulation Results](#simulation-results)** · **[Experimental Results](#experimental-results)**
 
+**[Open the video results page](https://coder-s1ngle.github.io/planar-formation-control-results/)** — smaller playback files, on-demand loading, and original-quality downloads. If the embedded GitHub player buffers, use the alternative links below each video.
+
 ## Simulation Results
 
 ### Formation Maneuvering
@@ -60,11 +62,15 @@ The videos can be played directly below. Both recordings retain the physical foo
 
 https://github.com/user-attachments/assets/b8f2b7d4-9d75-495b-b5f2-3bf143289cb9
 
+[Alternative player · smaller file](https://coder-s1ngle.github.io/planar-formation-control-results/#three-uav) · [Open smaller MP4](https://coder-s1ngle.github.io/planar-formation-control-results/assets/experiments/three_uav_formation_stream.mp4) · [Original-quality MP4](https://coder-s1ngle.github.io/planar-formation-control-results/assets/experiments/three_uav_formation.mp4)
+
 46.1 s · Original playback speed
 
 #### Four-UAV Formation
 
 https://github.com/user-attachments/assets/f0fc16f8-ea4c-4aae-8bc2-ac160ef96c68
+
+[Alternative player · smaller file](https://coder-s1ngle.github.io/planar-formation-control-results/#four-uav) · [Open smaller MP4](https://coder-s1ngle.github.io/planar-formation-control-results/assets/experiments/four_uav_formation_stream.mp4) · [Original-quality MP4](https://coder-s1ngle.github.io/planar-formation-control-results/assets/experiments/four_uav_formation.mp4)
 
 61.1 s · Original playback speed
 
